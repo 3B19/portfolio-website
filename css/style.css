@@ -94,3 +94,12 @@ body {
     text-transform: uppercase;
     border: 2px solid #0013B6;
   }
+  header {
+    background-color: #ff44c4;
+    padding: 10px;
+    margin: 10px;
+  }
+  /* Layout styling */
+  .container {
+    padding: 0 15px;
+  }
