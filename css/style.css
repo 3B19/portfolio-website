@@ -3,6 +3,10 @@ Colors used:
 Primary Color (Blue): #0013B6;
 Secondary Color (Green): #489c79;
 */
+* {
+    box-sizing: border-box;
+  }
+  
 body {
     background-color: whitesmoke;
 }
@@ -102,4 +106,13 @@ body {
   /* Layout styling */
   .container {
     padding: 0 15px;
+  }
+  #hero h1{
+    text-align: center; /* Centers text */
+  }
+  .logo {
+    max-width: 250px;
+}
+.row {
+    margin: 25px 0; /* 25px top and bottom, 0 left and right */
   }
