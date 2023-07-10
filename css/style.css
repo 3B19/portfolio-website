@@ -103,16 +103,10 @@ body {
     padding: 10px;
     margin: 0;
     position: relative;
-    .css-box-shadow {
-        /*start ------------*/
-        width: 10 px; 
-        height: 10px; 
-        background: #F8F8F8; 
-        border: solid #BDBDBD 1px; 
-        box-shadow: 5px 16px 20px rgba(0, 0, 0, 0.5)  ; 
-        -webkit-box-shadow: 5px 16px 20px rgba(0, 0, 0, 0.5)  ; 
-        -moz-box-shadow: 5px 16px 20px rgba(0, 0, 0, 0.5)  ; 
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
   }
   /* Layout styling */
   .container {
@@ -123,6 +117,7 @@ body {
   }
   .logo {
     max-width: 250px;
+    display: inline-block;
 }
 .row {
     margin: 25px 0; /* 25px top and bottom, 0 left and right */
@@ -136,7 +131,7 @@ body {
     width: 50%;
     padding: 0 10px;
     text-align: unset;
-    padding: 20px 0 13px;
+    padding: 20px 0 13px 13px;
   }
   nav {
     width: auto;
@@ -171,6 +166,10 @@ nav > ul {
   }
   #hero {
     background-color: #ffe4c4;
-    padding: 20px 0;
     border: 10px;
+    padding-bottom: 10px;
+  }
+  #work h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
   }
