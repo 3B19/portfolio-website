@@ -72,6 +72,10 @@ body {
     background-color: darkblue;
     color: white
   }
+
+  .button:visited { /* visited link */
+    color: pink;
+  }
   .button.contact {
     background-color: transparent;
     color: #0013B6;
@@ -92,19 +96,12 @@ body {
     text-transform: uppercase;
     border: 2px solid #0013B6;
   }
-  header {
-    background-color: #f0f0f0;
-    padding: 10px;
-    margin: 0;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-  }
+  
   /* Layout styling */
   .container {
     padding: 0 15px;
+    display: block;
+    margin: 0 auto;
   }
   #hero h1{
     text-align: center; /* Centers text */
@@ -112,6 +109,7 @@ body {
   .logo {
     max-width: 250px;
     display: inline-block;
+    margin: 10px;
 }
 .row {
     margin: 25px 0; /* 25px top and bottom, 0 left and right */
@@ -120,8 +118,66 @@ clear:both;
 }
 
 
+/* header */
+
+header {
+  background-color: #f0f0f0;
+  padding: 10px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right:0;
+  z-index: 4;
+  width: 100%;
+  
+}
+
+nav > ul > li {
+  display: inline-block;
+  padding: 10px 10px;
+  width: auto;
+  }
+
+nav > ul {
+  list-style: none;
+}
 
 @media screen and (min-width: 640px) {
+
+  main {
+    margin-top: 100px;
+  }
+
+  .container {
+    padding: 0 0px;
+   max-width: 1200px;
+  }
+
+  [class*="col-"] {
+    float: left;
+  }
+     
+      
+ .container .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+ 
+
+  header  .container{
+
+    display: flex;
+    flex-direction: row;
+  width: 100%;
+    justify-content:space-between;
+ 
+   
+  }
+
+
+
+
   .col-md-6 {
     float: left;
     width: 50%;
@@ -150,17 +206,25 @@ Large devices (1024px or larger)
 X-large devices (1440px or larger)
 ================================= */
 @media only screen and (min-width: 1440px) {
-}
 
-nav > ul > li {
-  display: inline-block;
-  padding: 10px 10px;
-  width: auto;
+  .col-lg-7 {
+    float: left;
+    width: 60%;
+    padding: 0 10px;
+    text-align: unset;
+    padding: 20px 0 13px 13px;
   }
 
-nav > ul {
-  list-style: none;
+  .col-lg-5 {
+    float: left;
+    width: 40%;
+    padding: 0 10px;
+    text-align: unset;
+    padding: 20px 0 13px 13px;
+  }
 }
+
+
 #hero h1 {
     margin: 0;
     padding: 0.67em 0;
@@ -174,10 +238,14 @@ nav > ul {
     margin-top: 0;
     margin-bottom: 10px;
   }
+
+
+
   @keyframes cloud-move {
     from {transform: translate(0,50px);}
     to {transform: translate(200px,50px);}
   }
+
   .cloud-front {
     animation: 30s cloud-move infinite alternate linear;
   }
@@ -187,4 +255,17 @@ nav > ul {
   }
   .cloud-back {
     animation: 34s cloud-move-reverse infinite alternate linear;
+  }
+
+  @keyframes color-change {
+    from {fill: #edc655;}
+    to {fill: #f76414;}
+  }
+
+  .sun {
+    animation-duration: 4s;
+    animation-name: color-change;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
   }
