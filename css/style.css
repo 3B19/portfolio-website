@@ -10,7 +10,7 @@ Secondary Color (Green): #489c79;
   html {
     scroll-behavior: smooth;
   }
-  
+
 body {
     background-color: #ffffff;
     font-family: 'Fira Sans', sans-serif;
@@ -137,16 +137,49 @@ header {
 
 nav > ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .navtoggle li:not(:last-child) {
   display: none;
 }
 
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+}
+
+.navtoggle.responsive li  {
+  display: block;
+}    
+  
+    
+ .navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+
+
+.navtoggle.responsive li  {
+  display: block;
+  padding: 12px 0;
+  border-top: 1px solid rgb(79, 122, 165);
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+}
+
 @media screen and (min-width: 640px) {
 
   main {
-    margin-top: 100px;
+    margin-top: 10px;
   }
 
   .navtoggle li:not(:last-child) {
@@ -169,7 +202,6 @@ nav > ul {
   .logo {
     max-width: 250px;
     display: inline-block;
-    margin: 10px;
 }
       
  .container .row::after {
@@ -179,7 +211,7 @@ nav > ul {
   }
  
 
-  header  .container{
+  header  .navtoggle{
 
     display: flex;
     flex-direction: row;
@@ -189,11 +221,34 @@ nav > ul {
    
   }
  
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
   nav > ul > li {
     display: inline-block;
     padding: 10px 10px;
     width: auto;
     }
+    .navtoggle.responsive nav {
+      padding: 0px 0 0;
+    }
+   
+    .navtoggle.responsive li  {
+      padding:0px 0;
+     border-top: 0px solid rgb(79, 122, 165);
+   }
+       
+       .navtoggle li:not(:last-child) {
+     display: inline-block;
+   }
+       
+       .navtoggle li:last-child {
+     display: none;
+   }
+       
 
 
   .col-md-6 {
@@ -203,11 +258,7 @@ nav > ul {
     text-align: unset;
     padding: 20px 0 13px 13px;
   }
-  nav {
-    width: auto;
-    float: right;
-    margin-top: 4px;
-  }
+
   .container {
     max-width: 1200px;
     margin-left: auto;
@@ -288,13 +339,3 @@ X-large devices (1440px or larger)
     animation-timing-function: linear;
   }
 
-  .navtoggle, .navtoggle.responsive {
-    position: relative;
-  }
-
-  .navtoggle li .icon {
-    position: absolute;
-    right: 0;
-    top: 2px;
-    font-size: 20px;
-  }
