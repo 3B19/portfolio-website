@@ -9,11 +9,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/d371071a41.js" crossorigin="anonymous"></script>
     <title>Udit Bisht Portfolio Site</title>
 </head>
 <body>
     <header id="header">
         <div class="container">
+            <div class="navtoggle" id="myNavtoggle"></div>
          <div class="logo">
              <img src="https://via.placeholder.com/150x50?text=Logo" alt="About Udit Bisht">
          </div>
@@ -23,6 +25,7 @@
                      <li><a href="about.html">About</a></li>
                      <li><a href="index.html">Work</a></li>
                      <li><a href="#contact">Contact</a></li>
+                     <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
                  </ul>
              </nav>
          </div>
@@ -735,6 +738,7 @@
     </div>
     </div>
 </footer>
+<script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/scripts.js"></script>
 </body>
 </html>

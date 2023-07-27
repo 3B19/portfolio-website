@@ -7,6 +7,10 @@ Secondary Color (Green): #489c79;
     box-sizing: border-box;
   }
   
+  html {
+    scroll-behavior: smooth;
+  }
+  
 body {
     background-color: #ffffff;
     font-family: 'Fira Sans', sans-serif;
@@ -107,7 +111,7 @@ body {
     text-align: center; /* Centers text */
   }
   .logo {
-    max-width: 250px;
+    max-width: 150px;
     display: inline-block;
     margin: 10px;
 }
@@ -122,8 +126,7 @@ clear:both;
 
 header {
   background-color: #f0f0f0;
-  padding: 10px;
-  position: fixed;
+  padding: 10px;  
   left: 0;
   top: 0;
   right:0;
@@ -132,14 +135,12 @@ header {
   
 }
 
-nav > ul > li {
-  display: inline-block;
-  padding: 10px 10px;
-  width: auto;
-  }
-
 nav > ul {
   list-style: none;
+}
+
+.navtoggle li:not(:last-child) {
+  display: none;
 }
 
 @media screen and (min-width: 640px) {
@@ -148,6 +149,14 @@ nav > ul {
     margin-top: 100px;
   }
 
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  .navtoggle li:last-child {
+    display: none;
+  }
+  
   .container {
     padding: 0 0px;
    max-width: 1200px;
@@ -156,7 +165,12 @@ nav > ul {
   [class*="col-"] {
     float: left;
   }
-     
+  
+  .logo {
+    max-width: 250px;
+    display: inline-block;
+    margin: 10px;
+}
       
  .container .row::after {
     content: "";
@@ -174,8 +188,12 @@ nav > ul {
  
    
   }
-
-
+ 
+  nav > ul > li {
+    display: inline-block;
+    padding: 10px 10px;
+    width: auto;
+    }
 
 
   .col-md-6 {
@@ -268,4 +286,15 @@ X-large devices (1440px or larger)
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: linear;
+  }
+
+  .navtoggle, .navtoggle.responsive {
+    position: relative;
+  }
+
+  .navtoggle li .icon {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    font-size: 20px;
   }
