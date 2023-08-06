@@ -100,6 +100,8 @@ a:active { /* selected link */
   color: #0013b6;
   text-transform: uppercase;
   border: 2px solid #0013b6;
+  display: inline-block;
+  margin: 10px 0;
 }
 
 .button.contact:hover {
@@ -192,6 +194,19 @@ nav > ul {
 
 .navtoggle.responsive li:last-child {
   padding: 0 0 10px;
+}
+
+/* Footer layout */
+
+.contact-background {
+  background-color: #e7e7e7;
+  padding: 10px 0;
+}
+
+.copy {
+  background-color: #0013b6;
+  color: #ffff;
+  padding: 10px 0;
 }
 
 @media screen and (min-width: 640px) {
@@ -316,6 +331,11 @@ X-large devices (1440px or larger)
   margin-bottom: 10px;
 }
 
+.berlin-illustration {
+  width: 100%;
+  height: auto;
+}
+
 @keyframes cloud-move {
   from { transform: translate(0, 50px); }
   to { transform: translate(200px, 50px); }
@@ -346,4 +366,3 @@ X-large devices (1440px or larger)
   animation-direction: alternate;
   animation-timing-function: linear;
 }
-
